@@ -1,3 +1,5 @@
-# Pre-launch: keep everything out of search engines.
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /quote/thanks/
+
+Sitemap: https://paxis-hk.com/sitemap.xml
