@@ -77,6 +77,15 @@ if (!wide.matches) return;
 timers.set(li, setTimeout(function () { setOpen(li, false); }, 180));
 });
 });
+document.addEventListener('keydown', function (e) {
+if (e.key !== 'Escape' && e.key !== 'Esc') return;
+items.forEach(function (li) {
+if (!li.classList.contains('is-open')) return;
+var inside = li.contains(document.activeElement);
+setOpen(li, false);
+if (inside && btnOf(li)) btnOf(li).focus();
+});
+});
 document.addEventListener('click', function (e) {
 if (!e.target.closest || !e.target.closest('.nav__item.has-sub')) closeAll(null);
 });
