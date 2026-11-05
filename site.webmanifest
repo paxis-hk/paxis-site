@@ -3,8 +3,8 @@
   "short_name": "PAXIS",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#F3F5F8",
-  "theme_color": "#082F57",
+  "background_color": "#F3F5F7",
+  "theme_color": "#0A1E33",
   "icons": [
     {
       "src": "/favicon-192.png",

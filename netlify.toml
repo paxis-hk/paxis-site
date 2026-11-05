@@ -4,7 +4,6 @@
 [build]
   publish = "."
   # The site is pre-built locally (python3 build.py) and dist/ is committed.
-  # Netlify can also run the build: command = "python3 build.py --netlify"
   command = ""
 
 # ---- redirects ---------------------------------------------------------
@@ -15,10 +14,9 @@
   status = 301
   force = true
 
-# old-style .html URLs and common guesses
 [[redirects]]
   from = "/contact"
-  to = "/quote/"
+  to = "/quote/#contact"
   status = 301
 
 # do not serve the config file itself from the publish folder
@@ -46,8 +44,6 @@
   # X-Robots-Tag = "noindex, nofollow"   # pre-launch only (PRELAUNCH flag in build.py)
 
 # Hashed file names under /assets/ never change content -> cache for a year.
-# HTML keeps Netlify's default (public, max-age=0, must-revalidate): short and
-# refreshed on every deploy.
 [[headers]]
   for = "/assets/*"
   [headers.values]

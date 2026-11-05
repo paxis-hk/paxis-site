@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design Notes for Parts Manufactured in China | PAXIS</title>
+<meta name="description" content="Practical design notes from real orders: hardness and grade, bare faces after coating, black finishes, thread engagement in thin sheet, painted plastics, DXF vs PDF.">
+<link rel="canonical" href="https://paxis-hk.com/resources/design-notes/">
+<link rel="preload" href="/assets/fonts/work-sans-regular.d65b45b4.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/work-sans-bold.fc2ec22d.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#0A1E33">
+<link rel="stylesheet" href="/assets/css/site.3ab228b5.css">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="PAXIS">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Design notes for parts manufactured in China">
+<meta property="og:description" content="What went wrong on real orders, and what to put on the drawing so it does not happen to yours.">
+<meta property="og:url" content="https://paxis-hk.com/resources/design-notes/">
+<meta property="og:image" content="https://paxis-hk.com/assets/og/factory-floor-cnc-aisle-card-1280.27a6ab54.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="PAXIS. Custom parts manufactured to your drawing in China. Photo of rows of CNC machines.">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://paxis-hk.com/#organization","name":"PAXIS","legalName":"HONG KONG PRIMEAXIS PRECISION LTD","url":"https://paxis-hk.com/","email":"or@paxis-hk.com","address":{"@type":"PostalAddress","addressRegion":"Hong Kong","addressCountry":"HK"},"foundingLocation":{"@type":"Place","name":"Hong Kong"},"description":"PAXIS (HONG KONG PRIMEAXIS PRECISION LTD) is a Hong Kong company under Western ownership. It manufactures custom parts to customer drawings in a network of vetted partner factories in southern and eastern China, supervised and inspected by its own team in China. Manufacturing in China since 2007.","logo":{"@type":"ImageObject","url":"https://paxis-hk.com/logo-512.png","width":512,"height":512}},{"@type":"WebSite","@id":"https://paxis-hk.com/#website","url":"https://paxis-hk.com/","name":"PAXIS","publisher":{"@id":"https://paxis-hk.com/#organization"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://paxis-hk.com/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://paxis-hk.com/resources/"},{"@type":"ListItem","position":3,"name":"Design notes","item":"https://paxis-hk.com/resources/design-notes/"}]}]}</script>
+<script src="/assets/js/site.6bdf959a.js" defer></script>
+</head>
+<body class="page-design-notes">
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+<div class="util"><div class="wrap util__in"><p class="util__id"><span>HONG KONG PRIMEAXIS PRECISION LTD</span><span>Incorporated in Hong Kong</span><span>Manufacturing in China since 2007</span></p><ul class="util__links"><li><a href="mailto:or@paxis-hk.com">or@paxis-hk.com</a></li><li class="hide-s"><a href="/resources/faq/#nda">NDA on request</a></li><li><a href="/quote/#contact">Contact</a></li></ul></div></div>
+
+<div class="site-header__bar"><div class="wrap site-header__in">
+<a class="brand" href="/"><img src="/assets/img/logo-header.509ac8c8.svg" alt="PAXIS home" width="181" height="56">
+</a>
+<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav"><span class="nav-toggle__bars" aria-hidden="true"></span><span class="nav-toggle__text">Menu</span></button>
+<nav class="nav" id="site-nav" aria-label="Main"><ul class="nav__list"><li class="nav__item has-sub has-mega"><a class="nav__link" href="/capabilities/">Capabilities</a><button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sub-capabilities"><span class="visually-hidden">Capabilities menu</span><svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="nav__panel nav__panel--mega" id="sub-capabilities"><div class="mega"><div class="mega__col"><p class="mega__h mono">Machining</p><ul><li><a class="nav__sublink" href="/capabilities/cnc-machining/"><span class="nav__label">CNC machining</span><span class="nav__desc">Milling, turning and 5-axis machining</span></a></li><li><a class="nav__sublink" href="/capabilities/jigs-and-fixtures/"><span class="nav__label">Jigs and fixtures</span><span class="nav__desc">Machining, welding, assembly and inspection fixtures</span></a></li></ul></div><div class="mega__col"><p class="mega__h mono">Fabrication and molding</p><ul><li><a class="nav__sublink" href="/capabilities/sheet-metal-laser-cutting/"><span class="nav__label">Sheet metal and laser cutting</span><span class="nav__desc">Laser-cut, bent, welded and riveted parts</span></a></li><li><a class="nav__sublink" href="/capabilities/plastic-parts-injection-molds/"><span class="nav__label">Plastic parts and injection molds</span><span class="nav__desc">Machined, cast and injection-molded parts</span></a></li><li><a class="nav__sublink" href="/capabilities/custom-springs/"><span class="nav__label">Custom springs</span><span class="nav__desc">Compression and extension springs</span></a></li></ul></div><div class="mega__col"><p class="mega__h mono">Assembly and packaging</p><ul><li><a class="nav__sublink" href="/capabilities/assemblies-and-kits/"><span class="nav__label">Assemblies and kits</span><span class="nav__desc">Parts from several processes, as one unit</span></a></li><li><a class="nav__sublink" href="/capabilities/eva-custom-packaging/"><span class="nav__label">EVA and custom packaging</span><span class="nav__desc">Foam inserts, cases and printed boxes</span></a></li></ul></div><div class="mega__col"><p class="mega__h mono">Materials and finishing</p><ul><li><a class="nav__sublink" href="/capabilities/materials/"><span class="nav__label">Materials</span><span class="nav__desc">Metals, plastics and specialized materials</span></a></li><li><a class="nav__sublink" href="/capabilities/finishes/"><span class="nav__label">Finishes</span><span class="nav__desc">Anodizing, coatings, heat treatment, painting</span></a></li><li><a class="nav__sublink" href="/capabilities/"><span class="nav__label">Capabilities overview</span><span class="nav__desc">Main capabilities; any other process on request</span></a></li></ul></div><div class="mega__feature"><div class="mega__img"><picture><source type="image/webp" srcset="/assets/img/part-20-card-480.e3dd4085.webp 480w, /assets/img/part-20-card-800.cc8bab65.webp 800w, /assets/img/part-20-card-1200.4f97a059.webp 1200w" sizes="16rem"><img src="/assets/img/part-20-card-480.de95fbb5.jpg" srcset="/assets/img/part-20-card-480.de95fbb5.jpg 480w, /assets/img/part-20-card-800.8c1b267c.jpg 800w, /assets/img/part-20-card-1200.8b20502b.jpg 1200w" sizes="16rem" width="480" height="360" alt="" decoding="async" loading="lazy"></picture><span class="mega__kind">Customer part</span></div><p class="mega__title">Not listed? Send the drawing</p><p class="mega__text">If it can be manufactured in China, we can manufacture it to your drawing.</p><a class="txtlink" href="/quote/">Request a quote</a></div></div></div></li><li class="nav__item has-sub"><a class="nav__link" href="/industries/">Industries</a><button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sub-industries"><span class="visually-hidden">Industries menu</span><svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="nav__panel" id="sub-industries"><ul class="nav__sublist"><li><a class="nav__sublink" href="/industries/#optics"><span class="nav__label">Optics and electro-optics</span></a></li><li><a class="nav__sublink" href="/industries/#medical"><span class="nav__label">Medical and ophthalmic devices</span></a></li><li><a class="nav__sublink" href="/industries/#laser"><span class="nav__label">Laser and industrial equipment</span></a></li><li><a class="nav__sublink" href="/industries/#power"><span class="nav__label">Power electronics</span></a></li><li><a class="nav__sublink" href="/industries/#automation"><span class="nav__label">Production and automation equipment</span></a></li><li><a class="nav__sublink" href="/industries/#electronics"><span class="nav__label">Electronics</span></a></li><li><a class="nav__sublink" href="/industries/#robotics"><span class="nav__label">Robotics</span></a></li><li><a class="nav__sublink" href="/industries/#energy"><span class="nav__label">Energy</span></a></li><li><a class="nav__sublink" href="/industries/#automotive"><span class="nav__label">Automotive</span></a></li></ul></div></li><li class="nav__item"><a class="nav__link" href="/quality/">Quality</a></li><li class="nav__item"><a class="nav__link" href="/how-we-work/">How we work</a></li><li class="nav__item has-sub"><a class="nav__link" href="/about/">About</a><button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sub-about"><span class="visually-hidden">About menu</span><svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="nav__panel" id="sub-about"><ul class="nav__sublist"><li><a class="nav__sublink" href="/about/"><span class="nav__label">About PAXIS</span></a></li><li><a class="nav__sublink" href="/about/factory-network/"><span class="nav__label">Factory network</span></a></li><li><a class="nav__sublink" href="/about/company-information/"><span class="nav__label">Company information</span></a></li></ul></div></li><li class="nav__item has-sub"><a class="nav__link is-current" href="/resources/">Resources</a><button class="nav__toggle" type="button" aria-expanded="false" aria-controls="sub-resources"><span class="visually-hidden">Resources menu</span><svg class="chev" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false"><path d="M2 4.5 6 8.5 10 4.5" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button><div class="nav__panel" id="sub-resources"><ul class="nav__sublist"><li><a class="nav__sublink" href="/resources/rfq-checklist/"><span class="nav__label">RFQ checklist</span></a></li><li><a class="nav__sublink" href="/resources/design-notes/" aria-current="page"><span class="nav__label">Design notes</span></a></li><li><a class="nav__sublink" href="/resources/example-documents/"><span class="nav__label">Example documents</span></a></li><li><a class="nav__sublink" href="/resources/faq/"><span class="nav__label">FAQ</span></a></li></ul></div></li><li class="nav__item nav__cta"><a class="btn btn--primary" href="/quote/">Request a quote</a></li></ul></nav>
+</div></div>
+</header>
+
+<main id="main" tabindex="-1">
+<div class="phead">
+<div class="wrap"><div class="sheet">
+<div class="zones" aria-hidden="true"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span><span>11</span><span>12</span></div>
+
+<div class="phead__grid">
+<div class="phead__text">
+<nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="/">Home</a></li><li><a href="/resources/">Resources</a></li><li><span aria-current="page">Design notes</span></li></ol></nav>
+<p class="eyebrow mono">Resources · Design notes</p>
+<h1>Design notes for parts manufactured in China</h1>
+<div class="phead__lead"><p>Each note says what to put on the drawing. Notes marked “From a past order” come from real orders, anonymized; the others are general engineering advice. None names a customer, a factory or a part.</p></div>
+<div class="actions"><a class="btn btn--primary" href="/quote/">Request a quote</a><a class="txtlink" href="/resources/rfq-checklist/">RFQ checklist</a></div>
+</div>
+<div class="phead__aside"></div>
+</div>
+</div></div>
+</div>
+<div class="wrap section notes-page">
+<section class="notes-group" aria-labelledby="notes-cnc"><h2 id="notes-cnc"><a href="/capabilities/cnc-machining/">CNC machining</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">1</span><div><p class="dnotes__label mono">From a past order</p><h3>Specify hardness and grade together.</h3><p>Full-hard 316 is not always available in China. On one order the factory proposed half-hard 316, and the customer approved it in writing before production started.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">2</span><div><p class="dnotes__label mono">Engineering note</p><h3>Mark the faces that must stay bare.</h3><p>If a coated part has electrical or locating contact faces, show them on the drawing. The factory can mask them, or re-machine them after coating.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">3</span><div><p class="dnotes__label mono">From a past order</p><h3>Give deep pockets a realistic roughness.</h3><p>A long tool in a deep pocket leaves a rougher surface than the outside faces. If the inside surface is functional, specify it; its feasibility is confirmed before the quotation.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">4</span><div><p class="dnotes__label mono">Engineering note</p><h3>Name the black finish.</h3><p>Black oxide, black anodizing, black PVD and QPQ are different processes with different appearance, thickness and corrosion behavior. The process named on the drawing is the one used; any change requires your written approval.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">5</span><div><p class="dnotes__label mono">Engineering note</p><h3>Send the PDF as the master.</h3><p>STEP files are welcome for programming. Where they disagree, the PDF drawing and its revision letter govern unless you specify otherwise.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-sheet"><h2 id="notes-sheet"><a href="/capabilities/sheet-metal-laser-cutting/">Sheet metal and laser cutting</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">6</span><div><p class="dnotes__label mono">From a past order</p><h3>Check thread engagement in thin sheet.</h3><p>A #4-40 thread in 2 mm sheet leaves little engagement. The factory raised it at drawing review, before production, and a press-fit nut was agreed in writing.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">7</span><div><p class="dnotes__label mono">Engineering note</p><h3>Hold the temper as drawn.</h3><p>Aluminum sheet in H32 and H34 bends differently. A change of temper is made only with your written approval.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">8</span><div><p class="dnotes__label mono">Engineering note</p><h3>Dimension from the features that matter.</h3><p>Dimensions across several bends accumulate tolerance. Dimension to the holes and faces that locate the part in your assembly.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">9</span><div><p class="dnotes__label mono">Engineering note</p><h3>Plan rivets with a fixture.</h3><p>Flush rivets depend on the riveting setup. State the flushness requirement on the drawing; the factory plans the riveting fixture for the part before production.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-plastic"><h2 id="notes-plastic"><a href="/capabilities/plastic-parts-injection-molds/">Plastic parts and injection molds</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">10</span><div><p class="dnotes__label mono">Engineering note</p><h3>Give painted plastic time to cure.</h3><p>Paint adhesion on cast and molded plastic depends on the primer system and the curing time. Specify the paint system and finish on the drawing; rest and curing times before packing are agreed before production.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">11</span><div><p class="dnotes__label mono">Engineering note</p><h3>Agree gate and ejector positions.</h3><p>Gate and ejector marks are visible on the part. Show which faces are cosmetic, and the positions are agreed with you before the mold is cut.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">12</span><div><p class="dnotes__label mono">Engineering note</p><h3>Machine before you mold.</h3><p>A machined or cast prototype costs considerably less than a mold and verifies fit before tooling is committed. The mold is built once the design is released.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">13</span><div><p class="dnotes__label mono">From a past order</p><h3>Name the glass content.</h3><p>Glass-filled grades differ in stiffness and shrinkage. If a grade is not readily available, this is stated before the quotation, with an alternative for your written approval.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-springs"><h2 id="notes-springs"><a href="/capabilities/custom-springs/">Custom springs</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">14</span><div><p class="dnotes__label mono">Engineering note</p><h3>Give load at a stated length.</h3><p>Wire size and coil count alone do not define a spring. Load at a stated length is the figure the inspection sheet checks.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">15</span><div><p class="dnotes__label mono">Engineering note</p><h3>Show the space, not only the spring.</h3><p>State the bore it works in or the rod it slides over. Diameters change slightly under load.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">16</span><div><p class="dnotes__label mono">Engineering note</p><h3>Specify whether the ends are ground.</h3><p>Ground ends add cost and ensure the spring stands square; open ends cost less. The drawing governs.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-fixtures"><h2 id="notes-fixtures"><a href="/capabilities/jigs-and-fixtures/">Jigs and fixtures</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">17</span><div><p class="dnotes__label mono">Engineering note</p><h3>Fixtures for assembly steps.</h3><p>Riveting, pressing and bonding steps are repeatable when the part is held in a fixture built for it. State which assembly steps need one, and it is included in the quotation.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">18</span><div><p class="dnotes__label mono">Engineering note</p><h3>Harden all wear parts.</h3><p>Locating pins and wear plates touch every part. Specify their hardness and make them replaceable.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">19</span><div><p class="dnotes__label mono">Engineering note</p><h3>Mark the datums.</h3><p>Show which faces and pins define the part position, so they are inspected and reported.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-eva"><h2 id="notes-eva"><a href="/capabilities/eva-custom-packaging/">EVA and custom packaging</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">20</span><div><p class="dnotes__label mono">Engineering note</p><h3>Name the master file.</h3><p>Send the DXF and the PDF together, and state which is the master. Unless you specify otherwise, the PDF is the master.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">21</span><div><p class="dnotes__label mono">Engineering note</p><h3>Approve a sample first.</h3><p>Foam and print differ slightly between suppliers. A sample with your parts in it is approved before the run.</p></div></li>
+</ol></section><section class="notes-group" aria-labelledby="notes-kits"><h2 id="notes-kits"><a href="/capabilities/assemblies-and-kits/">Assemblies and kits</a></h2><ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">22</span><div><p class="dnotes__label mono">Engineering note</p><h3>Agree the scope in writing.</h3><p>The scope is agreed in writing before the quotation: the steps PAXIS takes on, and the checks that apply to the assembled unit.</p></div></li>
+<li><span class="dnotes__n" aria-hidden="true">23</span><div><p class="dnotes__label mono">Engineering note</p><h3>One color reference.</h3><p>Parts painted in different shops can differ. Give one color reference and approve a matched sample set.</p></div></li>
+</ol></section>
+<section class="notes-group" aria-labelledby="notes-cny">
+<h2 id="notes-cny">Planning</h2>
+<ol class="dnotes"><li><span class="dnotes__n" aria-hidden="true">+</span><div><p class="dnotes__label mono">Engineering note</p><h3>Plan around Chinese New Year.</h3><p>Factories in China close for several weeks around Chinese New Year, in January or February. Orders placed shortly before the holiday are completed after it. The cut-off dates for your parts are confirmed when you order.</p></div></li></ol>
+</section>
+</div>
+<section class="cta" aria-labelledby="cta-title">
+<div class="wrap cta__grid">
+<div class="cta__text">
+<h2 id="cta-title">Request a quotation</h2>
+<p>Send your drawings with quantities, material and finish. Drawing questions are raised before the quotation, and the quotation is issued by PAXIS in US dollars.</p>
+<div class="actions"><a class="btn btn--light" href="/quote/">Request a quote</a><a class="txtlink txtlink--light" href="mailto:or@paxis-hk.com">or@paxis-hk.com</a></div>
+</div>
+<div class="slip" aria-labelledby="slip-title">
+<p class="slip__head"><span class="mono" id="slip-title">Transmittal · RFQ</span><span class="mono">By email only</span></p>
+<dl>
+<div><dt>To</dt><dd>or@paxis-hk.com</dd></div>
+<div><dt>Attach</dt><dd>PDF drawing with tolerances and revision; STEP if available</dd></div>
+<div><dt>State</dt><dd>Material, finish, quantities to price</dd></div>
+<div><dt>Optional</dt><dd>Your QC sheet; your NDA, which we sign on request</dd></div>
+</dl>
+</div>
+</div>
+</section>
+
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div class="footer-brand">
+<a class="footer-brand__logo" href="/"><img src="/assets/img/icon-dark.567fc5eb.svg" alt="" width="48" height="48">
+<span>PAXIS</span></a>
+<p>Custom parts manufactured to your drawing in vetted partner factories in southern and eastern China, supervised and inspected by our own team.</p>
+<p class="footer-brand__legal">HONG KONG PRIMEAXIS PRECISION LTD<br>Incorporated in Hong Kong</p>
+<p><a class="footer-mail" href="mailto:or@paxis-hk.com">or@paxis-hk.com</a></p>
+</div>
+<nav class="footer-col" aria-labelledby="fcol-0"><h2 class="footer-col__h" id="fcol-0">Capabilities</h2><ul><li><a href="/capabilities/cnc-machining/">CNC machining</a></li><li><a href="/capabilities/sheet-metal-laser-cutting/">Sheet metal and laser cutting</a></li><li><a href="/capabilities/plastic-parts-injection-molds/">Plastic parts and injection molds</a></li><li><a href="/capabilities/custom-springs/">Custom springs</a></li><li><a href="/capabilities/jigs-and-fixtures/">Jigs and fixtures</a></li><li><a href="/capabilities/eva-custom-packaging/">EVA and custom packaging</a></li><li><a href="/capabilities/assemblies-and-kits/">Assemblies and kits</a></li><li><a href="/capabilities/materials/">Materials</a></li><li><a href="/capabilities/finishes/">Finishes</a></li></ul></nav><nav class="footer-col" aria-labelledby="fcol-1"><h2 class="footer-col__h" id="fcol-1">Industries</h2><ul><li><a href="/industries/#optics">Optics and electro-optics</a></li><li><a href="/industries/#medical">Medical and ophthalmic devices</a></li><li><a href="/industries/#laser">Laser and industrial equipment</a></li><li><a href="/industries/#power">Power electronics</a></li><li><a href="/industries/#automation">Production and automation equipment</a></li><li><a href="/industries/#electronics">Electronics</a></li><li><a href="/industries/#robotics">Robotics</a></li><li><a href="/industries/#energy">Energy</a></li><li><a href="/industries/#automotive">Automotive</a></li></ul></nav><nav class="footer-col" aria-labelledby="fcol-2"><h2 class="footer-col__h" id="fcol-2">Company</h2><ul><li><a href="/about/">About PAXIS</a></li><li><a href="/about/factory-network/">Factory network</a></li><li><a href="/how-we-work/">How we work</a></li><li><a href="/quality/">Quality</a></li><li><a href="/about/company-information/">Company information</a></li></ul></nav><nav class="footer-col" aria-labelledby="fcol-3"><h2 class="footer-col__h" id="fcol-3">Resources</h2><ul><li><a href="/resources/rfq-checklist/">RFQ checklist</a></li><li><a href="/resources/design-notes/">Design notes</a></li><li><a href="/resources/example-documents/">Example documents</a></li><li><a href="/resources/faq/">FAQ</a></li><li><a href="/quote/">Request a quote</a></li></ul></nav>
+</div>
+<dl class="titleblock">
+<div class="titleblock__wide"><dt>Document</dt><dd>Design notes</dd></div>
+<div><dt>Company</dt><dd>HONG KONG PRIMEAXIS PRECISION LTD</dd></div>
+<div><dt>Registered</dt><dd>Incorporated in Hong Kong</dd></div>
+<div><dt>Team</dt><dd>Our team in China</dd></div>
+<div><dt>Units</dt><dd>mm, metric</dd></div>
+<div><dt>Issued</dt><dd>2026-11-05</dd></div>
+</dl>
+<div class="footer-legal">
+<p>© 2026 HONG KONG PRIMEAXIS PRECISION LTD. All rights reserved.</p>
+<ul><li><a href="/privacy/">Privacy</a></li><li><a href="/accessibility/">Accessibility</a></li><li><a href="/sitemap.xml">Sitemap</a></li></ul>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
